@@ -125,7 +125,7 @@ public final class StringUtil {
      * @return The trimmed CharSequence.
      */
     public static CharSequence trim(CharSequence str) {
-        if (str == null || str.length() == 0) {
+        if (TextUtils.isEmpty(str)) {
             return "";
         }
         int len = str.length();

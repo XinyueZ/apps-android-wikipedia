@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.view.GestureDetector;
@@ -377,10 +378,10 @@ public class GalleryItemFragment extends Fragment {
                             return;
                         }
                         updateProgressBar(false, true, 0);
-                        if (shouldHaveWhiteBackground(galleryItem.getMimeType())) {
+                        if (galleryItem != null && shouldHaveWhiteBackground(galleryItem.getMimeType())) {
                             imageView.setBackgroundColor(Color.WHITE);
                         }
-                        parentActivity.supportInvalidateOptionsMenu();
+                        ActivityCompat.invalidateOptionsMenu(parentActivity);
                     }
 
                     @Override

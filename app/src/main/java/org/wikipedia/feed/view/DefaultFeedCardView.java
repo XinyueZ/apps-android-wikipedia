@@ -13,6 +13,7 @@ public abstract class DefaultFeedCardView<T extends Card> extends CardView imple
 
     public DefaultFeedCardView(Context context) {
         super(context);
+        Utils.setStateListAnimator(this);
     }
 
     @Override public void setCard(@NonNull T card) {

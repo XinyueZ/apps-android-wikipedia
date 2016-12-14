@@ -4,6 +4,8 @@
              xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:background="?attr/window_background_color">
+
+
     <ProgressBar
             android:id="@+id/edit_section_load_progress"
             android:layout_gravity="center"
@@ -122,4 +124,9 @@
         </LinearLayout>
     </ScrollView>
 
+    <android.support.v7.widget.Toolbar
+        android:theme="@style/AppTheme.ToolbarTheme"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
 </FrameLayout>
